@@ -26,7 +26,11 @@ mongo_client: MongoClient = MongoClient(connection_string)
 database: Database = mongo_client.get_database("nocaptcha-database")
 collection: Collection = database.get_collection("Data")
 
-
+origins = [
+    "https://no-captcha-u4c4.vercel.app",
+    "https://no-captcha-u4c4.vercel.app/"  # Add your frontend domain here
+    # Add any other domains you want to allow
+]
 
 # Pydantic model for the incoming data
 class InteractionData(BaseModel):
@@ -45,7 +49,7 @@ class InteractionData(BaseModel):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins="*",
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
