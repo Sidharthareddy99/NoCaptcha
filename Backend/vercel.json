@@ -8,7 +8,7 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/submit-data/(.*)",
         "dest": "main.py"
       }
     ],
