@@ -9,7 +9,7 @@
     ],
     "routes": [
       {
-        "src": "/submit-data/(.*)",
+        "src": "/(.*)",
         "dest": "Backend/main.py"
       }
     ]
