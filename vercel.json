@@ -15,12 +15,12 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/api/(.*)",
         "dest": "Backend/main.py"
       },
       {
         "src": "/(.*)",
-        "dest": "/Frontend/dist/$1"
+        "dest": "Frontend/dist/$1"
       }
     ]
   }
