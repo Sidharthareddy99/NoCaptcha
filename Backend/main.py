@@ -51,7 +51,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/submit-data/")
+@app.post("/")
 async def submit_data(data: InteractionData):
     try:
         print(data.dict())

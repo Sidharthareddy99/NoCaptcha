@@ -372,7 +372,7 @@ const AadhaarDataCollection = () => {
     console.log(JSON.stringify(payload, null, 2));
 
     // Send data to backend API
-    fetch('http://localhost:8000/submit-data/', {
+    fetch('https://nocaptcha.onrender.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
